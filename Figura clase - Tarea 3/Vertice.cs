@@ -1,13 +1,25 @@
-﻿using OpenTK.Mathematics;
+using OpenTK.Mathematics;
+using OpenTK.Graphics.OpenGL;
 
 public class Vertice
 {
-    public Vector3 Posicion { get; set; }
-    public Vector3 Color { get; set; }
+    // Posición
+    public float X { get; set; }
+    public float Y { get; set; }
+    public float Z { get; set; }
 
-    public Vertice(float x, float y, float z, float r = 1f, float g = 1f, float b = 1f)
+    public Vertice(float x, float y, float z)
     {
-        Posicion = new Vector3(x, y, z);
-        Color = new Vector3(r, g, b);
+        X = x;
+        Y = y;
+        Z = z;
     }
+
+    public Vertice(float x, float y, float z, float r, float g, float b)
+    {
+        X = x;
+        Y = y;
+        Z = z;
+    }
+
 }
